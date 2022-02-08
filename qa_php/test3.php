@@ -9,11 +9,7 @@
 
         $test = "SELECT * FROM QA_ACCOUNT WHERE USERNAME = 'Marko';" 
         
-        #$user = $pdo->query($sql2)->fetch();
-
-        #echo $user[0];
-
-        echo $test;
+        echo $sql;
     }
 
     #foreach ($pdo->query($sql, PDO::FETCH_ASSOC) as $row){
