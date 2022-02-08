@@ -43,13 +43,7 @@
                     </tr>
                     <tr>
                         <td>Username:</td>
-                        <td><input type="text" name="input_username" 
-                        <?php
-                            if(isset($_GET['username'])){
-                                echo `value="$_GET['username']"`;
-                            }
-                            ?>
-                            required></td>
+                        <td><input type="text" name="input_username" required></td>
                     </tr>
                     <tr>
                         <td>Password:</td>
