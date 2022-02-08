@@ -12,14 +12,15 @@
 
         echo 'Connected to database'; 
 
-        #foreach ($conn->query('SELECT * FROM QA_Account;') as $row) {
-        #    echo $row['Username'];
-        #}
-
    } 
    catch(PDOException $e) { 
 
         echo 'ERROR: ' . $e->getMessage(); 
 
    } 
+
+   
+        foreach ($conn->query('SELECT * FROM QA_Account;') as $row) {
+            echo $row['Username'];
+        }
 ?>
