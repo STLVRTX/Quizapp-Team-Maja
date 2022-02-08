@@ -8,16 +8,17 @@
         $password = $_POST['input_password'];
         $repeatPassword = $_POST['input_password_repeat'];
 
-       if($password == $repeatPassword){
-            $data = $pdo->query("SELECT * FROM QA_Account WHERE Username='$name';");
-            $row = $data->fetch();
-            if(! $row){
-                echo 'user does not exist';
-            }
-       } 
-       else {
-           echo 'The passwords must match';
-       }
+        $data = $pdo->query("SELECT * FROM QA_Account WHERE Username='$name';");
+        $row = $data->fetch();
+        if(! $row){
+            echo 'user does not exist';
+        }
+       #if($password == $repeatPassword){
+            
+       #} 
+       #else {
+           #echo 'The passwords must match';
+       #}
     }
 ?>
 
