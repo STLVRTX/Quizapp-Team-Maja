@@ -16,7 +16,8 @@
     <body>
         <div style="position: absolute; top:50%; left:50%">
             <form method="post">
-                <input type="text" id="username">Username</input>
+                Username
+                <input type="text" id="username">
             </form>
         </div>
     </body>
