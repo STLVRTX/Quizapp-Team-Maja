@@ -35,7 +35,7 @@
                         <td><input type="text" name="input_pw"></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><input type="submit" name="submit"></td>
+                        <td colspan="2"><input type="submit" name="submit" style="display: block; margin: auto;"></td>
                     </tr>
                 </table>
             </form>
