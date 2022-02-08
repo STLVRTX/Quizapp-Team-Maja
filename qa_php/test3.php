@@ -7,3 +7,14 @@
         echo json_encode($row);
     }
 ?>
+
+<html>
+
+<head>
+</head>
+<body>
+<div style="position: absolute; top:50%; left:50%">
+Test
+</div>
+</body>
+</html>
