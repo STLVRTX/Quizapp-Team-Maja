@@ -29,8 +29,8 @@
     </head>
     <body>
         <div class="container">
-            <form method="post" style="align-self: center">
-                <table>
+        <table>
+                <form method="post" style="align-self: center">
                     <tr>
                         <td>Username:</td>
                         <td><input type="text" name="input_un"></td>
@@ -40,10 +40,15 @@
                         <td><input type="text" name="input_pw"></td>
                     </tr>
                     <tr>
-                        <td><input type="submit" name="submit"></td>
-                    </tr>
-                </table>
-            </form>
+                        <td><input type="submit" name="submit" value="Login"></td>
+                </form>
+                    <td>
+                        <form method="post" action="createAccount.php" style="align-self: center">
+                            <input type="submit" name="input_createAccount" value="Create New Account">        
+                        </form>
+                    </td>
+                </tr> 
+            </table>
         </div>
     </body>
 </html>
