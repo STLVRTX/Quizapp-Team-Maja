@@ -5,11 +5,14 @@
 
     if(isset($_POST['submit'])){
         $name = $_POST['input_un'];
-       foreach($pdo->query("SELECT * FROM QA_Account WHERE Username='$name'", PDO::FETCH_ASSOC) as $row){
-        if($row->rowCount()==0){
-            echo 'empty';
-        }    
-        echo json_encode($row);
+        $password = $_POST['input_pw'];
+        foreach($pdo->query("SELECT * FROM QA_Account WHERE Username='$name'", PDO::FETCH_ASSOC) as $row){   
+            if($password == $row['Password']){
+                header('Location: loggedIn.php');
+            }
+            else {
+                echo 'Incorrect Username or Password';
+            }
        }
     }
 
