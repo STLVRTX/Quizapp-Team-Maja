@@ -7,7 +7,12 @@
         
         $name = $_POST['input_un'];
        foreach($pdo->query("SELECT * FROM QA_Account WHERE Username='$name'", PDO::FETCH_ASSOC) as $row){
-        echo json_encode($row);
+        if($row->fetch() != null){
+            echo json_encode($row);
+        }
+        else {
+            echo 'leer';
+        }
        }
     }
 
