@@ -5,7 +5,7 @@
 
     if(isset($_POST['submit'])){
         
-        $stmt = 'SELECT * FROM QA_Account WHERE Username="' . $_POST['input'] . '";'; 
+        $stmt = 'SELECT * FROM QA_Account WHERE Username="' . $_POST['input_un'] . '";'; 
 
         echo $stmt;
     }
