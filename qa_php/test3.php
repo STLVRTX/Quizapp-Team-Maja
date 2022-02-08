@@ -3,6 +3,20 @@
 
     $sql = 'SELECT * FROM QA_Account';
 
+if(issset($_POST['submit'])){
+
+    $sql = 'SELECT * FROM QA_Account WHERE Username=' . $_POST['input_un'] . ';';
+
+    foreach($pdo->query($sql, PDO::FETCH_ASSOC) as $row){
+        if($row != null){
+            echo json_encode($row);
+        }
+        else {
+            echo 'error';
+        }
+    }
+}
+
     #foreach ($pdo->query($sql, PDO::FETCH_ASSOC) as $row){
     #    echo json_encode($row);
     #}
@@ -12,19 +26,22 @@
 
     <head>
         <style>
-.container{
- width: 100%;
- display: flex;
- height: 100vh;
- justify-content: center;
-}
+            .container {
+            width: 100%;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            }
         </style>
     </head>
     <body>
         <div class="container">
             <form method="post" style="align-self: center">
-                Username
-                <input type="text" id="username">
+                Username:
+                <input type="text" name="input_un">
+                Password:
+                <input type="text" name="input_pw">
+                <input type="submit" name="submit">
             </form>
         </div>
     </body>
