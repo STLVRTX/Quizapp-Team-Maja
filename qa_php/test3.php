@@ -12,7 +12,7 @@
 
     <head>
         <style>
-            .container {display: flex; justify-content: center;}
+            .container {display: flex; justify-content: center; margin-top:50%; margin-left:50%;}
         </style>
     </head>
     <body>
