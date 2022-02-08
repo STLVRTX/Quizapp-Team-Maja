@@ -9,9 +9,8 @@
         $repeatPassword = $_POST['input_password_repeat'];
 
         $data = $pdo->query("SELECT * FROM QA_Account WHERE Username='$name';");
-        $row = $data->fetch();
 
-        echo json_encode($row);
+        echo json_encode($data);
         #if(! $row){
         #    echo 'user does not exist';
         #}
