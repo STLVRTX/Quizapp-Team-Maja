@@ -12,22 +12,17 @@
 
     <head>
         <style>
-            body {
-    margin: 0;
-    padding: 0;
-    text-align: center; /* !!! */
-}
-
-.container {
-    margin: 0 auto;
-    text-align: left;
-    width: 800px;
+.container{
+ width: 100%;
+ display: flex;
+ height: 100vh;
+ justify-content: center;
 }
         </style>
     </head>
     <body>
         <div class="container">
-            <form method="post">
+            <form method="post" style="align-self: center">
                 Username
                 <input type="text" id="username">
             </form>
