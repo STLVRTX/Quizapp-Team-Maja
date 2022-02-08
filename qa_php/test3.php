@@ -30,8 +30,8 @@
     <body>
         <div class="container">
         <table>
-                <form method="post" style="align-self: center">
                     <tr>
+                        <form method="post" style="align-self: center">
                         <td>Username:</td>
                         <td><input type="text" name="input_un"></td>
                     </tr>
