@@ -1,9 +1,9 @@
 <?php
    $tns = "quizzapp_high"; 
 
-   $user = "QUIZZDEMO"; 
+   $user = "quizzteam4"; 
 
-   $password = "QuizzApp2506"; 
+   $password = "QuizzApp8535"; 
    try { 
 
         $conn = new PDO("oci:dbname=".$tns, $user, $password); 
