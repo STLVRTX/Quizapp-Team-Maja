@@ -23,11 +23,19 @@
     <body>
         <div class="container">
             <form method="post" style="align-self: center">
-                Username:
-                <input type="text" name="input_un">
-                Password:
-                <input type="text" name="input_pw">
-                <input type="submit" name="submit">
+                <table>
+                    <tr>
+                        <td>Username:</td>
+                        <td><input type="text" name="input_un"></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="text" name="input_pw"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" name="submit"></td>
+                    </tr>
+                </table>
             </form>
         </div>
     </body>
