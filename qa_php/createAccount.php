@@ -9,7 +9,7 @@
         $repeatPassword = $_POST['input_password_repeat'];
 
        if($password == $repeatPassword){
-            $data = $pdo-prepare("SELECT * FROM QA_Account WHERE Username='$name';");
+            $data = $pdo->query("SELECT * FROM QA_Account WHERE Username='$name';");
             $row = $data->fetch();
             if(! $row){
                 echo 'user does not exist';
@@ -19,7 +19,6 @@
            echo 'The passwords must match';
        }
     }
-
 ?>
 
 <html>
