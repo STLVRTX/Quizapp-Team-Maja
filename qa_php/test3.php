@@ -29,7 +29,7 @@
     </head>
     <body>
         <div class="container">
-            <a href="createAccount.php">Create New Account</a>
+            <a href="createAccount.php" style="align-self: center">Create New Account</a>
             <form method="post" style="align-self: center">
                 <table>
                     <tr>
