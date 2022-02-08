@@ -7,9 +7,8 @@
         
         $stmt = 'SELECT * FROM QA_Account WHERE Username="' . $_POST['input_un'] . '";'; 
 
-        foreach($pdo->query($stmt) as $row){
-            echo $row;
-        }
+        $data = $pdo->execute($stmt);
+        echo $data;
     }
 
     #foreach ($pdo->query($sql, PDO::FETCH_ASSOC) as $row){
