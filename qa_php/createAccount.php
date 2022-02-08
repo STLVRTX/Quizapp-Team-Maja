@@ -8,18 +8,21 @@
         $password = $_POST['input_password'];
         $repeatPassword = $_POST['input_password_repeat'];
 
-        $result = $pdo->query("SELECT * FROM QA_Account WHERE Username='$name'", PDO::FETCH_ASSOC);
-        $row = $result->fetch();
+       if($password == $repeatPassword){
+            $result = $pdo->query("SELECT * FROM QA_Account WHERE Username='$name'", PDO::FETCH_ASSOC);
+            $row = $result->fetch();
 
-        if(! $row){
-            echo 'user does not exist';
-        }
-       #if($password == $repeatPassword){
-            
-       #} 
-       #else {
-           #echo 'The passwords must match';
-       #}
+            if(! $row){
+                #$pdo->query("INSERT INTO QA_Account (USERNAME, PASSWORD, EMAIL) VALUES ($name, $password, $mail)");
+                echo 'user created';
+            }
+            else {
+                echo 'This username is already taken'
+            }
+       } 
+       else {
+           echo 'The passwords must match';
+       }
     }
 ?>
 
@@ -44,15 +47,15 @@
                     </tr>
                     <tr>
                         <td>E-Mail:</td>
-                        <td><input type="email" name="input_mail" ></td>
+                        <td><input type="email" name="input_mail" required></td>
                     </tr>
                     <tr>
                         <td>Password:</td>
-                        <td><input type="text" name="input_password" ></td>
+                        <td><input type="text" name="input_password" required></td>
                     </tr>
                     <tr>
                         <td>Repeat Password:</td>
-                        <td><input type="text" name="input_password_repeat" ></td>
+                        <td><input type="text" name="input_password_repeat" required></td>
                     </tr>
                     <tr>
                         <td><input type="submit" name="submit" value="Create Account"></td>
