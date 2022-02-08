@@ -6,8 +6,6 @@
     if(isset($_POST['submit'])){
         
         $sql = "SELECT * FROM QA_Account WHERE Username='" . $_POST['input_un'] . "';"; 
-
-        $sql2 = "SELECT * FROM QA_ACCOUNT WHERE USERNAME = 'Marko';" 
         
         #$user = $pdo->query($sql2)->fetch();
 
