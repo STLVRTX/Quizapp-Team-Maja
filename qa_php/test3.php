@@ -6,6 +6,7 @@
     if(isset($_POST['submit'])){
         $name = $_POST['input_un'];
         $password = $_POST['input_pw'];
+        echo $name . " " . $password;
         foreach($pdo->query("SELECT * FROM QA_Account WHERE Username='$name'", PDO::FETCH_ASSOC) as $row){   
             if($password == $row['Password']){
                 header('Location: loggedIn.php');
