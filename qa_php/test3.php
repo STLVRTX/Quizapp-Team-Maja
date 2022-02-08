@@ -1,15 +1,14 @@
 <?php
+    require('connection2.php');
+
+    $sql = 'SELECT * FROM QA_Account';
+
     if(isset($_POST['submit'])){
-        require('connection2.php');
+        
         $sql = 'SELECT * FROM QA_Account WHERE Username="' . $_POST['input_un'] . '";'; 
 
-        foreach($pdo->query($sql) as $row){
-            echo $row[0];
-        }
+        $pdo->execute($sql)
     }
-
-    require('connection2.php');
-    $sql = 'SELECT * FROM QA_Account';
 
     #foreach ($pdo->query($sql, PDO::FETCH_ASSOC) as $row){
     #    echo json_encode($row);
@@ -17,6 +16,7 @@
 ?>
 
 <html>
+
     <head>
         <style>
             .container {
