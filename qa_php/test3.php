@@ -3,7 +3,9 @@
 
     $sql = 'SELECT * FROM QA_Account';
 
-
+    if(isset($_POST['submit'])){
+        
+    }
 
     #foreach ($pdo->query($sql, PDO::FETCH_ASSOC) as $row){
     #    echo json_encode($row);
@@ -35,7 +37,7 @@
                         <td><input type="text" name="input_pw"></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><input type="submit" name="submit" style="text-align: right"></td>
+                        <td><input type="submit" name="submit"></td>
                     </tr>
                 </table>
             </form>
