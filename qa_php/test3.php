@@ -12,7 +12,17 @@
 
     <head>
         <style>
-            .container {display: flex; justify-content: center; vertical-align: center;}
+            body {
+    margin: 0;
+    padding: 0;
+    text-align: center; /* !!! */
+}
+
+.container {
+    margin: 0 auto;
+    text-align: left;
+    width: 800px;
+}
         </style>
     </head>
     <body>
