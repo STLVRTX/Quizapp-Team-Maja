@@ -7,14 +7,16 @@ if(issset($_POST['submit'])){
 
     $sql = 'SELECT * FROM QA_Account WHERE Username=' . $_POST['input_un'] . ';';
 
-    foreach($pdo->query($sql, PDO::FETCH_ASSOC) as $row){
-        if($row != null){
-            echo json_encode($row);
-        }
-        else {
-            echo 'error';
-        }
-    }
+    #foreach($pdo->query($sql, PDO::FETCH_ASSOC) as $row){
+    #    if($row != null){
+    #        echo json_encode($row);
+    #    }
+    #    else {
+    #        echo 'error';
+    #    }
+    #}
+
+    echo 'test';
 }
 
     #foreach ($pdo->query($sql, PDO::FETCH_ASSOC) as $row){
