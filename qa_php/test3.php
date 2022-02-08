@@ -1,9 +1,9 @@
 <?php
     require('connection2.php');
 
-    $data = $pdo->query('SELECT * FROM QA_Account');
-
-    $result = $data->fetchAll(PDO::FETCH_ASSOC);
-        echo json_encode($data);
+    foreach (as $row) {
+        $row = $row->fetchAll(PDO::FETCH_ASSOC);
+        echo json_encode($row);
         echo '<br>';
+    }
 ?>
