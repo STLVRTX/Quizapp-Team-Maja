@@ -8,12 +8,12 @@
         $password = $_POST['input_password'];
         $repeatPassword = $_POST['input_password_repeat'];
 
-        $result = $pdo->query("SELECT * FROM QA_Account WHERE Username='$name'");
-        echo json_encode($result->fetchAll());
+        $result = $pdo->query("SELECT * FROM QA_Account WHERE Username='$name'", PDO::FETCH_ASSOC);
+        $row = $result->fetch();
 
-        #if(! $row){
-        #    echo 'user does not exist';
-        #}
+        if(! $row){
+            echo 'user does not exist';
+        }
        #if($password == $repeatPassword){
             
        #} 
