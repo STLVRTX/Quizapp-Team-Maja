@@ -13,8 +13,8 @@
             $row = $result->fetch();
 
             if(! $row){
-                $pdo->query("INSERT INTO QA_Account (USERNAME, PASSWORD, EMAIL) VALUES ('$name', '$password', '$mail')");
-                echo 'user created';
+                #$pdo->query("INSERT INTO QA_Account (USERNAME, PASSWORD, EMAIL) VALUES ('$name', '$password', '$mail')");
+                alert('Success');
             }
             else {
                 echo 'This username is already taken';
@@ -41,6 +41,11 @@
         <div class="container">
             <form method="post" style="align-self: center">
                 <table>
+                    <tr>
+                        <td>
+                            <a href="login.php" style="align-self: center">Login</a>
+                        </td>
+                    </tr>
                     <tr>
                         <td>Username:</td>
                         <td><input type="text" name="input_username" required></td>
