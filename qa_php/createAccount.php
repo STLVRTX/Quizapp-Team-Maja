@@ -8,7 +8,7 @@
         $password = $_POST['input_password'];
         $repeatPassword = $_POST['input_password_repeat'];
 
-        $result = $pdo->query("SELECT * FROM QA_Account;");
+        $result = $pdo->query("SELECT * FROM QA_Account WHERE Username='$name'");
         echo json_encode($result->fetchAll());
 
         #if(! $row){
