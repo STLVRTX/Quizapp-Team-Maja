@@ -7,7 +7,7 @@
     #    echo '<br>';
     #}
 
-    $sth = $dbh->prepare("SELECT * FROM QA_Account");
+    $sth = $pdo->prepare("SELECT * FROM QA_Account");
     $sth->execute();
     $result = $sth->fetchAll();
     echo($result);
