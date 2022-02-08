@@ -4,7 +4,7 @@
     $sql = 'SELECT * FROM QA_Account';
 
     if(isset($_POST['submit'])){
-        echo 'Username: ' . $_POST['username'] . '<br>Password: ' . $_POST['password'] . '<br>';
+        echo 'Username: ' . $_POST['input_un'] . '<br>Password: ' . $_POST['input_pw'] . '<br>';
     }
 
     #foreach ($pdo->query($sql, PDO::FETCH_ASSOC) as $row){
