@@ -5,10 +5,9 @@
 
     if(isset($_POST['submit'])){
         
-        echo $_POST['input_un'];
-        echo '<br>';
-        echo '<br>';
-        echo $_POST['input_pw'];
+        $stmt = 'SELECT * FROM QA_Account WHERE Username="' . $_POST['input'] . '";'; 
+
+        echo $stmt;
     }
 
     #foreach ($pdo->query($sql, PDO::FETCH_ASSOC) as $row){
