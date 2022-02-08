@@ -5,16 +5,10 @@
 
     if(isset($_POST['submit'])){
         
-        $sql = 'SELECT * FROM QA_Account WHERE Username =' . $_POST['input_un'] . ';';
-
-        foreach($pdo->query($sql) as $row){
-            if($row != null){
-                echo $row['Username'];
-            }
-            else {
-                echo 'empty';
-            }
-        }
+        echo $_POST['input_un'];
+        echo '<br>';
+        echo '<br>';
+        echo $_POST['input_pw'];
     }
 
     #foreach ($pdo->query($sql, PDO::FETCH_ASSOC) as $row){
