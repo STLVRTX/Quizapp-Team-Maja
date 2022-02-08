@@ -29,9 +29,10 @@
     </head>
     <body>
         <div class="container">
-        <table>
+            <a href="createAccount.php">Create New Account</a>
+            <form method="post" style="align-self: center">
+                <table>
                     <tr>
-                        <form method="post" style="align-self: center">
                         <td>Username:</td>
                         <td><input type="text" name="input_un"></td>
                     </tr>
@@ -41,14 +42,9 @@
                     </tr>
                     <tr>
                         <td><input type="submit" name="submit" value="Login"></td>
-                </form>
-                    <td>
-                        <form method="post" action="createAccount.php" style="align-self: center">
-                            <input type="submit" name="input_createAccount" value="Create New Account">        
-                        </form>
-                    </td>
-                </tr> 
-            </table>
+                    </tr>
+                </table>
+            </form>
         </div>
     </body>
 </html>
