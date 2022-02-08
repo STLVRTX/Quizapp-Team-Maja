@@ -14,7 +14,7 @@
 
             if(! $row){
                 #$pdo->query("INSERT INTO QA_Account (USERNAME, PASSWORD, EMAIL) VALUES ('$name', '$password', '$mail')");
-                alert('Success');
+                header('Location: login.php?username='.$name);
             }
             else {
                 echo 'This username is already taken';
