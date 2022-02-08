@@ -9,9 +9,9 @@
 
         $sql2 = "SELECT * FROM QA_ACCOUNT WHERE USERNAME = 'Marko';" 
         
-        foreach($pdo->query($sql2) as $row){
-            echo $row[1];
-        }
+        $user = $pdo->query($sql2)->fetch();
+
+        echo $user[0];
     }
 
     #foreach ($pdo->query($sql, PDO::FETCH_ASSOC) as $row){
