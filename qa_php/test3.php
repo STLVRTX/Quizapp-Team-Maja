@@ -8,7 +8,9 @@
         $sql = "SELECT * FROM QA_Account WHERE Username='" . $_POST['input_un'] . "';"; 
 
         foreach($pdo->query($sql) as $row){
-            echo json_encode($row);
+            if($row == null){
+                echo 'error';
+            }
         }
     }
 
