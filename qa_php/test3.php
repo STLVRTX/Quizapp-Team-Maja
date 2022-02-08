@@ -8,7 +8,7 @@
         $password = $_POST['input_pw'];
         echo $name . " " . $password;
         foreach($pdo->query("SELECT * FROM QA_Account WHERE Username='$name'", PDO::FETCH_ASSOC) as $row){  
-            echo $row['Password']; 
+            echo json_encode($row);
             if($password == $row['Password']){
                 header('Location: loggedIn.php');
             }
