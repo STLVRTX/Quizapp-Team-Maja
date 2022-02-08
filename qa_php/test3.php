@@ -2,8 +2,10 @@
     require('connection2.php');
 
     if(isset($_POST['submit'])){
+
         $name = $_POST['input_username'];
         $password = $_POST['input_password'];
+        
         foreach($pdo->query("SELECT * FROM QA_Account WHERE Username='$name'", PDO::FETCH_ASSOC) as $row){  
             if($password == $row['PASSWORD']){
                 header('Location: loggedIn.php');
