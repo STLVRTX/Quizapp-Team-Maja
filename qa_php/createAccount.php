@@ -17,7 +17,7 @@
                 echo 'user created';
             }
             else {
-                echo 'This username is already taken'
+                echo 'This username is already taken';
             }
        } 
        else {
