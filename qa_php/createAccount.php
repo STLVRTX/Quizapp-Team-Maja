@@ -13,7 +13,7 @@
             $row = $result->fetch();
 
             if(! $row){
-                #$pdo->query("INSERT INTO QA_Account (USERNAME, PASSWORD, EMAIL) VALUES ($name, $password, $mail)");
+                $pdo->query("INSERT INTO QA_Account (USERNAME, PASSWORD, EMAIL) VALUES ($name, $password, $mail)");
                 echo 'user created';
             }
             else {
