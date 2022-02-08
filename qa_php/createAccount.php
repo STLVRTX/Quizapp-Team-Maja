@@ -13,8 +13,8 @@
             $row = $result->fetch();
 
             if(! $row){
-                #$pdo->query("INSERT INTO QA_Account (USERNAME, PASSWORD, EMAIL) VALUES ('$name', '$password', '$mail')");
-                header('Location: login.php');
+                $pdo->query("INSERT INTO QA_Account (USERNAME, PASSWORD, EMAIL) VALUES ('$name', '$password', '$mail')");
+                header('Location: login.php?accountCreated=true');
             }
             else {
                 echo 'This username is already taken';

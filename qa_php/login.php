@@ -16,9 +16,9 @@
        }
     }
 
-    #foreach ($pdo->query($sql, PDO::FETCH_ASSOC) as $row){
-    #    echo json_encode($row);
-    #}
+    if(isset($_GET['accountCreated'])){
+        echo 'Account created';
+    }
 ?>
 
 <html>
@@ -47,7 +47,7 @@
                     </tr>
                     <tr>
                         <td>Password:</td>
-                        <td><input type="text" name="input_password" required></td>>
+                        <td><input type="text" name="input_password" required></td>
                     </tr>
                     <tr>
                         <td><input type="submit" name="submit" value="Login"></td>
