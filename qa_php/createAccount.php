@@ -10,9 +10,11 @@
 
         $data = $pdo->query("SELECT * FROM QA_Account WHERE Username='$name';");
         $row = $data->fetch();
-        if(! $row){
-            echo 'user does not exist';
-        }
+
+        echo json_encode($row);
+        #if(! $row){
+        #    echo 'user does not exist';
+        #}
        #if($password == $repeatPassword){
             
        #} 
