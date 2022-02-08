@@ -1,11 +1,9 @@
 <?php
     require('connection2.php');
 
-    $sql = "SELECT * FROM QA_Account";
-
     if(isset($_POST['submit'])){
-        $name = $_POST['input_un'];
-        $password = $_POST['input_pw'];
+        $name = $_POST['input_username'];
+        $password = $_POST['input_password'];
         foreach($pdo->query("SELECT * FROM QA_Account WHERE Username='$name'", PDO::FETCH_ASSOC) as $row){  
             if($password == $row['PASSWORD']){
                 header('Location: loggedIn.php');
@@ -43,11 +41,11 @@
                     </tr>
                     <tr>
                         <td>Username:</td>
-                        <td><input type="text" name="input_un"></td>
+                        <td><input type="text" name="input_username" required></td>
                     </tr>
                     <tr>
                         <td>Password:</td>
-                        <td><input type="text" name="input_pw"></td>
+                        <td><input type="text" name="input_password" required></td>>
                     </tr>
                     <tr>
                         <td><input type="submit" name="submit" value="Login"></td>
