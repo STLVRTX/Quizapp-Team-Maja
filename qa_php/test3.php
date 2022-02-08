@@ -11,10 +11,12 @@
 <html>
 
     <head>
-
+        <style>
+            .container {display: flex; justify-content: center;}
+        </style>
     </head>
     <body>
-        <div style="position: absolute; top:50%; left:50%; justify-content: center">
+        <div class="container">
             <form method="post">
                 Username
                 <input type="text" id="username">
