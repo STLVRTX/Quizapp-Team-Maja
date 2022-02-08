@@ -7,7 +7,7 @@
         
         $name = $_POST['input_un'];
        foreach($pdo->query("SELECT * FROM QA_Account WHERE Username='$name'") as $row){
-        echo $row;
+        echo json_encode($row);
        }
     }
 
