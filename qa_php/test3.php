@@ -14,7 +14,7 @@
 
     </head>
     <body>
-        <div style="position: absolute; top:50%; left:50%">
+        <div style="position: absolute; top:50%; left:50%; justify-content: center">
             <form method="post">
                 Username
                 <input type="text" id="username">
