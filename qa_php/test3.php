@@ -6,7 +6,7 @@
    $password = "QuizzApp8535"; 
    try { 
 
-        $conn = new PDO("oci:dbname=".$tns, $user, $password); 
+        $conn = new PDO("oci:dbname=QA_DB".$tns, $user, $password); 
 
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 
@@ -19,8 +19,7 @@
 
    } 
 
-   
-        foreach ($conn->query('SELECT * FROM QA_Account;') as $row) {
-            echo $row['Username'];
-        }
+    foreach ($conn->query('SELECT * FROM QA_Account;') as $row) {
+        echo $row['Username'];
+    }
 ?>
