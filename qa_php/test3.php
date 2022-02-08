@@ -1,11 +1,11 @@
 <?php
     require('connection2.php');
 
-    $sql = 'SELECT * FROM QA_Account';
+    $sql = "SELECT * FROM QA_Account";
 
     if(isset($_POST['submit'])){
         
-        $sql = 'SELECT * FROM QA_Account WHERE Username="' . $_POST['input_un'] . '";'; 
+        $sql = "SELECT * FROM QA_Account WHERE Username='" . $_POST['input_un'] . "';'"; 
 
         echo $sql;
     }
