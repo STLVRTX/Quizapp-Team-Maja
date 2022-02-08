@@ -8,7 +8,8 @@
     #}
 
     $sth = $pdo->prepare("SELECT * FROM QA_Account");
-    $sth->execute();
-    $result = $sth->fetchAll();
-    echo($result);
+    foreach ($sth->execute() as $row) {
+        $result = $row->fetchAll();
+        echo($result);
+    }
 ?>
