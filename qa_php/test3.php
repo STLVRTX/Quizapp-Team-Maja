@@ -16,7 +16,6 @@
 ?>
 
 <html>
-
     <head>
         <style>
             .container {
