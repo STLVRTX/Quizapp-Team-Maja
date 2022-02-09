@@ -6,7 +6,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 $request_uri = $_SERVER['REQUEST_URI'];
 
-$tables = ['QA_Account'];
+$tables = ['accounts'];
 
 $url = rtrim($request_uri, '/');
 $url = filter_var($url, FILTER_SANITIZE_URL);
@@ -23,7 +23,8 @@ else {
 }
 
 if(in_array($tableName, $tables)){
-    include_once './api/account.php';
+    include_once './classes/Database.php';
+    include_once './api/accounts.php';
 }
 else {
     echo 'table does not exist';
