@@ -11,6 +11,5 @@ $url = rtrim($request_uri, '/');
 $url = filter_var($request_uri, FILTER_SANITIZE_URL);
 $url = explode('/', $url);
 
-$tableName = (string) $url[3];
-print_r($tableName);
+print_r($url);
 ?>
