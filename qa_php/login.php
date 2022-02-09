@@ -1,6 +1,6 @@
 <?php
     if(isset($_POST['submit'])){
-
+        
     }
 ?>
 
@@ -14,8 +14,8 @@
             function getJSONFromDatabase(x){
                 xhr = new XMLHttpRequest();
                 if(x != null){
-                xhr.open('GET', 'main.php?id=' + x, true);
-                xhr.onreadystatechange = fillForm;
+                xhr.open('GET', 'index.php?username=' + x, true);
+                /*xhr.onreadystatechange = fillForm;*/
                 xhr.send(null);
                 }
             }
@@ -34,16 +34,6 @@
         <form method="post">
             <table>
                 <tr>
-                    <td>ID</td>
-                    <td>
-                        <select name="usr_id" id="id_select" onchange="getJSONFromDatabase(this.value)">
-                            <option value=""></option>
-                            <?php
-                                    
-                            ?>
-                    </td>
-                </tr>
-                <tr>
                     <td>Username</td>
                     <td><Input type="text" id="usr_name" name="usr_name"></td>
                 </tr>
@@ -52,7 +42,7 @@
                     <td><Input type="text" id="usr_password" name="usr_password"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><Input type="submit" value="Save Data" name="submit"></td>
+                    <td colspan="2"><Input type="submit" value="Save Data" name="submit" onclick="getJSONFromDatabse('usr_name')"></td>
                 </tr>
             </table>
         </form>

@@ -16,9 +16,9 @@
         }
     }
     elseif ($method == 'POST'){
-        if($_POST != null && !$id){
-            extract($_POST);
-            DB::query("INSERT INTO $tableName")
+        if($_POST != null){
+            #extract($_POST);
+            #DB::query("INSERT INTO $tableName (USERNAME, PASSWORD, EMAIL) VALUES (:username, :password, :email)", array(':username' => $username, ':password' => $password, ':email' => $email));
         }
     }
 
