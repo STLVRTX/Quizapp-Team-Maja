@@ -1,15 +1,6 @@
 <?php
-    require("../db_connection.php");
     if(isset($_POST['submit'])){
 
-        $jsonString = '[{"Username": "' . $_POST['usr_name'] . '", "Password": "' . $_POST['usr_password'] . '"}]';
-
-        $sql = "UPDATE useraccounts SET User=? WHERE ID=" . $_POST['usr_id'];
-
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute([$jsonString]);
-
-        unset($_POST['submit']);
     }
 ?>
 
@@ -48,10 +39,7 @@
                         <select name="usr_id" id="id_select" onchange="getJSONFromDatabase(this.value)">
                             <option value=""></option>
                             <?php
-                                    require("../db_connection.php");
-                                    foreach($pdo->query("SELECT id FROM useraccounts") as $row){
-                                        echo '<option value="' . $row['id'] . '">' . $row['id'] . '</option>';
-                                    }
+                                    
                             ?>
                     </td>
                 </tr>
