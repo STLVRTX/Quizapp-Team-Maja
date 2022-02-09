@@ -21,8 +21,9 @@
             }
 
             function handleLogin(){
-                let myObj = JSON.parse(xhr.responseText);
-                console.log(myObj[0]);
+                let user = JSON.parse(xhr.responseText);
+                console.log(user[0]['PASSWORD']);
+                //if(document.getElementById('password') == user[0]['PASSWORD'])
             }
 
         </script>
