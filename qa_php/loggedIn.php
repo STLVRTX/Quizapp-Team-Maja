@@ -4,9 +4,9 @@ require('connect2.php');
 
 $id = $_GET['id'];
 
-$pdo->query("UPDATE QA_Player SET LOGGEDIN = 1 WHERE PLAYERID=$id");
+#$pdo->query("UPDATE QA_Player SET LOGGEDIN = 1 WHERE PLAYERID=$id");
 
-echo 'Logged In';
+echo 'Logged In User: ' . $id;
 
 ?>
 
