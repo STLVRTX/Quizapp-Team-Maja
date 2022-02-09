@@ -30,6 +30,9 @@
                         console.log('Incorrect username or password');
                     }
                 }
+                else {
+                    console.log('Incorrect username or password');
+                }
             }
 
         </script>
