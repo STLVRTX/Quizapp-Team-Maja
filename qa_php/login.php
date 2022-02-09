@@ -38,9 +38,7 @@
                 <td><button onclick="getJSONFromDatabase(document.getElementById('name').value)">Go</button></td>
                 </tr>
             </table> 
-        </div>
-        <div>
-            <p id="ausgabe">Test</p>
+            <p id="ausgabe" style="align-self: center">Test</p>
         </div>
     </body>
 </html>
