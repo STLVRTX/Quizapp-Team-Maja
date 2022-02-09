@@ -13,7 +13,6 @@ $url = filter_var($url, FILTER_SANITIZE_URL);
 $url = explode('/', $url);
 
 $tableName = (string) $url[4];
-print_r($tableName);
 
 if($url[5] != null){
     $id = (int) $url[5];
