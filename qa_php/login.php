@@ -6,11 +6,12 @@
             var xhr = null;
 
             function getJSONFromDatabase(){
-                xhr = new XMLHttpRequest();
+                alert(document.getElementById('usr_name').value);
+                /*xhr = new XMLHttpRequest();
                 if(x != null){
                 xhr.open('GET', 'index.php/accounts/' + document.getElementById('usr_name').value, true);
                 xhr.onreadystatechange = fillForm;
-                xhr.send(null);
+                xhr.send(null);*/
                 }
             }
 
