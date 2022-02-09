@@ -5,9 +5,9 @@
         <script>
             var xhr = null;
 
-            function getJSONFromDatabase(){
+            function getJSONFromDatabase(x){
                 xhr = new XMLHttpRequest();
-                xhr.open('GET', 'index.php/accounts/Marko', true);
+                xhr.open('GET', 'index.php/accounts/' + x, true);
                 xhr.onload = function(){
                     document.getElementById('ausgabe').innerHTML = xhr.responseText;
                 }
@@ -16,7 +16,8 @@
         </script>
     </head>
     <body>
-    <button onclick="getJSONFromDatabase()">Go</button>
+        <input type="text" id="name" value="Marko">
+    <button onclick="getJSONFromDatabase(document.getElementById('name').value)">Go</button>
     <p id="ausgabe">Test</p>
     </body>
 </html>
