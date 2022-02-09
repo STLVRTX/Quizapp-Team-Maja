@@ -17,7 +17,7 @@ class DB {
         $stmt->execute($params);
 
         if(explode(' ', $query)[0] == 'SELECT'){
-            $data = $stmt->fetchAll();
+            $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
             
             return $data;
         }

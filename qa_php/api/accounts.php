@@ -1,8 +1,8 @@
 <?php
     $tableName = 'QA_Account';
     if($method == 'GET'){
-        if($id){
-            $data = DB::query("SELECT * FROM $tableName WHERE ACCOUNTID=:id", array(':id' => $id));
+        if($username){
+            $data = DB::query("SELECT * FROM $tableName WHERE USERNAME=':username'", array(':username' => $username));
             if($data != null){
                 echo json_encode($data);
             }
@@ -13,6 +13,12 @@
         else {
             $data = DB::query("SELECT * FROM $tableName");
             echo json_encode($data);
+        }
+    }
+    elseif ($method == 'POST'){
+        if($_POST != null && !$id){
+            extract($_POST);
+            DB::query("INSERT INTO $tableName")
         }
     }
 

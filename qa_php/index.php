@@ -15,10 +15,10 @@ $url = explode('/', $url);
 $tableName = (string) $url[4];
 
 if($url[5] != null){
-    $id = (int) $url[5];
+    $username = (int) $url[5];
 }
 else {
-    $id = null;
+    $username = null;
 }
 
 if(in_array($tableName, $tables)){
