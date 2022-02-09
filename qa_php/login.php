@@ -5,23 +5,22 @@
         <script>
             var xhr = null;
 
-            function getJSONFromDatabase(x){
-                console.log(x);
-                /*xhr = new XMLHttpRequest();
+            function getJSONFromDatabase(){
+                xhr = new XMLHttpRequest();
                 if(x != null){
-                xhr.open('GET', 'index.php/accounts/' + x, true);
+                xhr.open('GET', 'index.php/accounts/Marko', true);
                 xhr.onreadystatechange = fillForm;
                 xhr.send(null);
-                }*/
+                }
             }
 
             function fillForm() {
                 if(xhr.readyState == 4){
                     var myObj = xhr.responseText;
                     document.getElementById("output").innerHTML = json_encode(myObj);
-                    /*myObj = eval("(" + myObj + ")");
+                    myObj = eval("(" + myObj + ")");
                     document.getElementById('usr_name').setAttribute('value', myObj[0]['USERNAME']);
-                    document.getElementById('usr_password').setAttribute('value', myObj[0]['PASSWORD']);*/
+                    document.getElementById('usr_password').setAttribute('value', myObj[0]['PASSWORD']);
                 }
             }
         </script>
@@ -38,7 +37,7 @@
                     <td><Input type="text" id="usr_password" name="usr_password"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><Input type="submit" value="Save Data" name="submit" onclick="getJSONFromDatabse('usr_name')"></td>
+                    <td colspan="2"><Input type="submit" value="Save Data" name="submit" onclick="getJSONFromDatabse()"></td>
                 </tr>
             </table>
         </form>
