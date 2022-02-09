@@ -1,9 +1,3 @@
-<?php
-    if(isset($_POST['submit'])){
-        
-    }
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,9 +17,10 @@
             function fillForm() {
                 if(xhr.readyState == 4){
                     var myObj = xhr.responseText;
-                    myObj = eval("(" + myObj + ")");
+                    document.getElementById("output").innerHTML = json_encode(myObj);
+                    /*myObj = eval("(" + myObj + ")");
                     document.getElementById('usr_name').setAttribute('value', myObj[0]['USERNAME']);
-                    document.getElementById('usr_password').setAttribute('value', myObj[0]['PASSWORD']);
+                    document.getElementById('usr_password').setAttribute('value', myObj[0]['PASSWORD']);*/
                 }
             }
         </script>
@@ -46,5 +41,6 @@
                 </tr>
             </table>
         </form>
+        <div id="output"></div>
     </body>
 </html>
