@@ -10,7 +10,7 @@
                 xhr.open('GET', 'index.php/accounts/Marko', true);
                 var myObj = xhr.responseText;
                 myObj = eval("(" + myObj + ")");
-                xhr.onreadystatechange = document.getElementById('ausgabe').innerHTML = JSON.parse(myObj);
+                xhr.onreadystatechange = document.getElementById('ausgabe').innerHTML = JSON.parse(myObj[0]);
                 xhr.send(null);
             }
         </script>
