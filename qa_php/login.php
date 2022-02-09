@@ -9,7 +9,7 @@
                 xhr = new XMLHttpRequest();
                 xhr.open('GET', 'index.php/accounts/Marko', true);
                 xhr.onload = function(){
-                    console.log(xhr.responseText);
+                    document.getElementById('ausgabe').innerHTML = xhr.responseText;
                 }
                 xhr.send(null);
             }
