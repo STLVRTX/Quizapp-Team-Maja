@@ -2,7 +2,9 @@
 
 require('connect2.php');
 
-$pdo->query("UPDATE QA_Player SET LOGGEDIN = 1 WHERE PLAYERID=$_GET['id']");
+$id = $_GET['id'];
+
+$pdo->query("UPDATE QA_Player SET LOGGEDIN = 1 WHERE PLAYERID=$id");
 
 echo 'Logged In';
 
@@ -21,7 +23,7 @@ echo 'Logged In';
     </head>
     <body>
         <div class="container">
-            <a href="loggedOut.php?id= <?php echo $_GET['id']?>">Logout</a>
+            <a href="loggedOut.php?id= <?php echo $id?>">Logout</a>
         </div>
     </body>
 </html>
