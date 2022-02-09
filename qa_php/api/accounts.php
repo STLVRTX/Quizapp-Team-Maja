@@ -11,4 +11,10 @@
             }
         }
     }
+    elseif ($method == 'POST'){
+        if($_POST != null && !$username){
+            #extract($_POST);
+            print_r($_POST['username'])
+        }
+    }
 ?>
