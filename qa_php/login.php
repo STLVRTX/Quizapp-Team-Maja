@@ -7,10 +7,11 @@
 
             function getJSONFromDatabase(x){
                 xhr = new XMLHttpRequest();
-                if(x != null){
+                alert(x);
+                /*if(x != null){
                 xhr.open('GET', 'index.php/accounts/' + x, true);
                 xhr.onreadystatechange = fillForm;
-                xhr.send(null);
+                xhr.send(null);*/
                 }
             }
 
