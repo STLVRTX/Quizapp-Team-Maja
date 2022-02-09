@@ -8,9 +8,7 @@
             function getJSONFromDatabase(){
                 xhr = new XMLHttpRequest();
                 xhr.open('GET', 'index.php/accounts/Marko', true);
-                var myObj = xhr.responseText;
-                myObj = eval("(" + myObj + ")");
-                xhr.onreadystatechange = document.getElementById('ausgabe').innerHTML = JSON.parse(myObj[0]);
+                xhr.onreadystatechange = document.getElementById('ausgabe').innerHTML = JSON.parse(xhr.responseText);
                 xhr.send(null);
             }
         </script>
