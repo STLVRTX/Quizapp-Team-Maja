@@ -17,7 +17,8 @@
                 xhr = new XMLHttpRequest();
                 xhr.open('GET', 'index.php/accounts/' + x, true);
                 xhr.onload = function(){
-                    document.getElementById('ausgabe').innerHTML = xhr.responseText;
+                    let myObj = JSON.parse(xhr.responseText);
+                    console.log(myObj);
                 }
                 xhr.send(null);
             }
@@ -38,8 +39,6 @@
                 <td><button onclick="getJSONFromDatabase(document.getElementById('name').value)">Go</button></td>
                 </tr>
             </table>
-            <br> 
-            <p id="ausgabe" style="align-self: center">Test</p>
         </div>
     </body>
 </html>
