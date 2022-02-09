@@ -6,7 +6,7 @@
             var xhr = null;
 
             function getJSONFromDatabase(){
-                alert(document.getElementById('usr_name').value);
+                console.log(document.getElementById('usr_name').value);
                 /*xhr = new XMLHttpRequest();
                 if(x != null){
                 xhr.open('GET', 'index.php/accounts/' + document.getElementById('usr_name').value, true);
