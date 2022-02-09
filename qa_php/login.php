@@ -21,8 +21,9 @@
             }
 
             function handleLogin(){
-                let user = JSON.parse(xhr.responseText);
-                if(user[0]['message'] == undefined){
+                if(xhr.responseText != null){
+                    console.log(xhr.responseText);
+                    let user = JSON.parse(xhr.responseText);
                     if(document.getElementById('password').value == user[0]['PASSWORD']){
                         console.log('Logged In');
                     }

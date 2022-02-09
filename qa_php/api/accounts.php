@@ -6,9 +6,6 @@
             if($data != null){
                 echo json_encode($data);
             }
-            else {
-                echo json_encode(['message' => 'user does not exist']);
-            }
         }
     }
 ?>
