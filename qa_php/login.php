@@ -28,17 +28,18 @@
             <table style="align-self: center">
                 <tr>
                     <td>Username:</td>
-                    <td><input type="text" id="name" name="input_username" required></td>
+                    <td><input type="text" id="name"></td>
                 </tr>
                 <tr>
                     <td>Password:</td>
-                    <td><input type="text" id="password" name="input_password" required></td>
+                    <td><input type="text" id="password"></td>
                 </tr>
                 <tr>
                 <td><button onclick="getJSONFromDatabase(document.getElementById('name').value)">Go</button></td>
                 </tr>
             </table>
+            <br>
+            <p id="ausgabe">Test</p>
         </div>
-        <p id="ausgabe">Test</p>
     </body>
 </html>
