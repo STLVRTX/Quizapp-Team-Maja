@@ -8,9 +8,10 @@
             function getJSONFromDatabase(x){
                 xhr = new XMLHttpRequest();
                 xhr.open('GET', 'index.php/accounts/' + x, true);
-                xhr.onload = function(){
+                /*xhr.onload = function(){
                     document.getElementById('ausgabe').innerHTML = xhr.responseText;
-                }
+                }*/
+                xhr.onload = fillForm;
                 xhr.send(null);
             }
 
