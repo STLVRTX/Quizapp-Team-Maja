@@ -21,15 +21,16 @@
             }
 
             function handleLogin(){
-                let user = JSON.parse(xhr.responseText);
-
-                console.log(user[0]['PASSWORD']);
-                console.log(document.getElementById('password').value);
-
-                if(document.getElementById('password').value == user[0]['PASSWORD']){
-                    console.log('Logged In');
+                if(xhr.responseText != null){
+                    let user = JSON.parse(xhr.responseText);
+                    if(document.getElementById('password').value == user[0]['PASSWORD']){
+                        console.log('Logged In');
+                    }
+                    else {
+                        console.log('Incorrect username or password');
+                    }
                 }
-                else {
+                else{
                     console.log('Incorrect username or password');
                 }
             }
