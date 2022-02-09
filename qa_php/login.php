@@ -5,13 +5,12 @@
         <script>
             var xhr = null;
 
-            function getJSONFromDatabase(x){
+            function getJSONFromDatabase(){
                 xhr = new XMLHttpRequest();
-                alert(x);
-                /*if(x != null){
-                xhr.open('GET', 'index.php/accounts/' + x, true);
+                if(x != null){
+                xhr.open('GET', 'index.php/accounts/' + document.getElementById('usr_name').value, true);
                 xhr.onreadystatechange = fillForm;
-                xhr.send(null);*/
+                xhr.send(null);
                 }
             }
 
@@ -27,7 +26,7 @@
         </script>
     </head>
     <body>
-        <form method="post" onsubmit="getJSONFromDatabse('usr_name')">
+        <form method="post" onsubmit="getJSONFromDatabse()">
             <table>
                 <tr>
                     <td>Username</td>
