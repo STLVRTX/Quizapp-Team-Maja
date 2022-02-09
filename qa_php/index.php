@@ -7,6 +7,8 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 $request_uri = $_SERVER['REQUEST_URI'];
 
-echo $request_uri;
+$url rtrim($request_uri, '/');
+
+echo $url;
 
 ?>
