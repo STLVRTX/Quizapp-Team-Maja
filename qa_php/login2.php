@@ -7,7 +7,15 @@
 
             function getJSONFromDatabase(){
                 xhr = new XMLHttpRequest();
-                xhr.open('GET', 'index.php/accounts/' + <? if(isset($_POST['submit'])){echo $_POST['usr_name']} ?>, true);
+                xhr.open('GET', 
+                <? 
+                    echo 'index.php/accounts/'; 
+                    if(isset($_POST['submit']))
+                    {
+                        echo $_POST['usr_name']
+                    } 
+                ?>, 
+                true);
                 /*xhr.onload = function(){
                     document.getElementById('ausgabe').innerHTML = xhr.responseText;
                 }*/
