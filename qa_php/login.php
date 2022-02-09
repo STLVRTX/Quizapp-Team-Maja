@@ -15,7 +15,8 @@
             }
         </script>
     </head>
-    <body onload="getJSONFromDatabase()">
+    <body>
+    <button onclick="getJSONFromDatabase()">Go</button>
     <p id="ausgabe">Test</p>
     </body>
 </html>
