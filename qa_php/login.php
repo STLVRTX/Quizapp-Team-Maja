@@ -16,12 +16,15 @@
             function getJSONFromDatabase(x){
                 xhr = new XMLHttpRequest();
                 xhr.open('GET', 'index.php/accounts/' + x, true);
-                xhr.onload = function(){
-                    let myObj = JSON.parse(xhr.responseText);
-                    console.log(myObj);
-                }
+                xhr.onload = handleLogin;
                 xhr.send(null);
             }
+
+            function handleLogin(){
+                let myObj = JSON.parse(xhr.responseText);
+                console.log(myObj[0]);
+            }
+
         </script>
     </head>
     <body>
