@@ -8,7 +8,7 @@
             function getJSONFromDatabase(){
                 xhr = new XMLHttpRequest();
                 xhr.open('GET', 'index.php/accounts/Marko', true);
-                xhr.onreadystatechange = document.getElementById('ausgabe').innerHTML = xhr.responseText;
+                xhr.onreadystatechange = document.getElementById('ausgabe').innerHTML = xhr.response;
                 xhr.send(null);
             }
         </script>
