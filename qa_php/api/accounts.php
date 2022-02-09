@@ -10,16 +10,5 @@
                 echo json_encode(['message' => 'user does not exist']);
             }
         }
-        else {
-            $data = DB::query("SELECT * FROM $tableName");
-            echo json_encode($data);
-        }
     }
-    elseif ($method == 'POST'){
-        if($_POST != null){
-            #extract($_POST);
-            #DB::query("INSERT INTO $tableName (USERNAME, PASSWORD, EMAIL) VALUES (:username, :password, :email)", array(':username' => $username, ':password' => $password, ':email' => $email));
-        }
-    }
-
 ?>
