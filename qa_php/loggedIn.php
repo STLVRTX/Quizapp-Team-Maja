@@ -2,12 +2,16 @@
 
 require('connect2.php');
 
-$id = $_GET['id'];
+if(isset($_GET['id'])){
+    $id = $_GET['id'];
 
-#$pdo->query("UPDATE QA_Player SET LOGGEDIN = 1 WHERE PLAYERID=$id");
-
-echo 'Logged In User: ' . $id;
-
+    #$pdo->query("UPDATE QA_Player SET LOGGEDIN = 1 WHERE PLAYERID=$id");
+    
+    echo 'Logged In User: ' . $id;
+}
+else {
+    echo 'error';
+}
 ?>
 
 <html>
