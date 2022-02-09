@@ -7,11 +7,9 @@
 
             function getJSONFromDatabase(){
                 xhr = new XMLHttpRequest();
-                if(x != null){
-                xhr.open('GET', 'test.php', true);
+                xhr.open('GET', 'index.php/accounts/Marko', true);
                 xhr.onreadystatechange = document.getElementById('ausgabe').innerHTML = xhr.responseText;
                 xhr.send(null);
-                }
             }
         </script>
     </head>
