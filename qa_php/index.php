@@ -15,4 +15,5 @@ echo 'Komm discord janik';
 
 $tableName = (string) $url[3];
 print_r($tableName);
+print_r($url);
 ?>
