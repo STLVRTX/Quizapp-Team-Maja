@@ -15,7 +15,7 @@ $url = explode('/', $url);
 $tableName = (string) $url[4];
 
 if($url[5] != null){
-    $username = (int) $url[5];
+    $username = (string) $url[5];
 }
 else {
     $username = null;
