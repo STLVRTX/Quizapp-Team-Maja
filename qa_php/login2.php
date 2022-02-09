@@ -5,9 +5,9 @@
         <script>
             var xhr = null;
 
-            function getJSONFromDatabase(){
+            function getJSONFromDatabase(x){
                 xhr = new XMLHttpRequest();
-                xhr.open('GET', 'index.php/accounts/' + document.getElementById('usr_name').value, true);
+                xhr.open('GET', 'index.php/accounts/' + x, true);
                 /*xhr.onload = function(){
                     document.getElementById('ausgabe').innerHTML = xhr.responseText;
                 }*/
@@ -37,7 +37,7 @@
                     <td><Input type="text" id="usr_password" name="usr_password" value=""></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><Input type="submit" value="Save Data" name="submit" onclick="getJSONFromDatabase()"></td>
+                    <td colspan="2"><Input type="submit" value="Save Data" name="submit" onclick="getJSONFromDatabase(document.getElementById('usr_name').value)"></td>
                 </tr>
             </table>
         </form>
