@@ -27,7 +27,7 @@
         </script>
     </head>
     <body>
-        <form method="post">
+        <form method="post" onsubmit="getJSONFromDatabse('usr_name')">
             <table>
                 <tr>
                     <td>Username</td>
@@ -38,7 +38,7 @@
                     <td><Input type="text" id="usr_password" name="usr_password"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><Input type="submit" value="Save Data" name="submit" onclick="getJSONFromDatabse('usr_name')"></td>
+                    <td colspan="2"><Input type="submit" value="Save Data" name="submit"></td>
                 </tr>
             </table>
         </form>
