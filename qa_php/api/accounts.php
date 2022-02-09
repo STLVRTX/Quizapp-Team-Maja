@@ -1,9 +1,9 @@
 <?php
     $tableName = 'QA_Account';
     if($method == 'GET'){
-        echo $username;
-        if($username){
+        if($username != null){
             $data = DB::query("SELECT * FROM $tableName WHERE USERNAME=':username'", array(':username' => $username));
+            echo json_encode($data);
             if($data != null){
                 echo json_encode($data);
             }
