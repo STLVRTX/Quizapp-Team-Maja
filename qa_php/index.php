@@ -5,6 +5,8 @@ header('Access-Control-Allow-Methods: GET, POST, PUT');
 
 $method = $_SERVER['REQUEST_METHOD'];
 
-echo $method;
+$request_uri = $_SERVER['REQUEST_URI'];
+
+echo $request_uri;
 
 ?>
