@@ -29,11 +29,11 @@
             <table>
                 <tr>
                     <td>Username</td>
-                    <td><Input type="text" id="usr_name" name="usr_name"></td>
+                    <td><Input type="text" id="usr_name" name="usr_name" value=""></td>
                 </tr>
                 <tr>
                     <td>Password</td>
-                    <td><Input type="text" id="usr_password" name="usr_password"></td>
+                    <td><Input type="text" id="usr_password" name="usr_password" value=""></td>
                 </tr>
                 <tr>
                     <td colspan="2"><Input type="submit" value="Save Data" name="submit" onclick="getJSONFromDatabase('Marko')"></td>
