@@ -36,7 +36,7 @@
                     <td><Input type="text" id="usr_password" name="usr_password"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><Input type="submit" value="Save Data" name="submit" onclick="getJSONFromDatabase('usr_name')"></td>
+                    <td colspan="2"><Input type="submit" value="Save Data" name="submit" onclick="getJSONFromDatabase('Marko')"></td>
                 </tr>
             </table>
         </form>
