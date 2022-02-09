@@ -25,7 +25,7 @@
             }
         </script>
     </head>
-    <body onload="getJSONFromDatabase('Marko')">
+    <body">
         <form method="post">
             <table>
                 <tr>
