@@ -11,8 +11,8 @@
                 if(x != null){
                 xhr.open('GET', 'index.php/accounts/' + document.getElementById('usr_name').value, true);
                 xhr.onreadystatechange = fillForm;
-                xhr.send(null);*/
-                }
+                xhr.send(null);
+                }*/
             }
 
             function fillForm() {
