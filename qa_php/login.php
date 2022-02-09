@@ -8,7 +8,7 @@
         
         foreach($pdo->query("SELECT * FROM QA_Account WHERE Username='$name'", PDO::FETCH_ASSOC) as $row){  
             if($password == $row['PASSWORD']){
-                header('Location: loggedIn.php');
+                header('Location: loggedIn.php?id=' . $row['ACCOUNTID']);
             }
             else {
                 echo 'Incorrect Username or Password';
