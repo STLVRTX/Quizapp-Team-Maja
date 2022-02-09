@@ -14,8 +14,8 @@
             function getJSONFromDatabase(x){
                 xhr = new XMLHttpRequest();
                 if(x != null){
-                xhr.open('GET', 'index.php?username=' + x, true);
-                /*xhr.onreadystatechange = fillForm;*/
+                xhr.open('GET', 'index.php/accounts/?username=' + x, true);
+                xhr.onreadystatechange = fillForm;
                 xhr.send(null);
                 }
             }
@@ -24,8 +24,8 @@
                 if(xhr.readyState == 4){
                     var myObj = xhr.responseText;
                     myObj = eval("(" + myObj + ")");
-                    document.getElementById('usr_name').setAttribute('value', myObj[0]['Username']);
-                    document.getElementById('usr_password').setAttribute('value', myObj[0]['Password']);
+                    document.getElementById('usr_name').setAttribute('value', myObj[0]['USERNAME']);
+                    document.getElementById('usr_password').setAttribute('value', myObj[0]['PASSWORD']);
                 }
             }
         </script>
