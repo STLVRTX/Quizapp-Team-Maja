@@ -14,7 +14,7 @@
             function getJSONFromDatabase(x){
                 xhr = new XMLHttpRequest();
                 if(x != null){
-                xhr.open('GET', 'index.php/accounts/?username=' + x, true);
+                xhr.open('GET', 'index.php/accounts/' + x, true);
                 xhr.onreadystatechange = fillForm;
                 xhr.send(null);
                 }
