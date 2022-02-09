@@ -9,5 +9,7 @@ $request_uri = $_SERVER['REQUEST_URI'];
 $url = rtrim($request_uri, '/');
 $url = filter_var($url, FILTER_SANITIZE_URL);
 $url = explode('/', $url);
-print_r($url);
+
+$tableName = (string) $url[4];
+print_r($tableName);
 ?>
