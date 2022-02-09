@@ -7,6 +7,5 @@ $method = $_SERVER['REQUEST_METHOD'];
 $request_uri = $_SERVER['REQUEST_URI'];
 
 $url = rtrim($request_uri, '/');
-$url = filter_var($url, FILTER_SANITZE_URL);
 echo $url;
 ?>
