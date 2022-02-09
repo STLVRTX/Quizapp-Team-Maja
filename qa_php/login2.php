@@ -19,8 +19,8 @@
                 if(xhr.readyState == 4){
                     var myObj = xhr.responseText;
                     myObj = eval("(" + myObj + ")");
-                    document.getElementById('usr_name').setAttribute('value', myObj[0]['Username']);
-                    document.getElementById('usr_password').setAttribute('value', myObj[0]['Password']);
+                    document.getElementById('usr_name').setAttribute('value', myObj[0]['USERNAME']);
+                    document.getElementById('usr_password').setAttribute('value', myObj[0]['PASSWORD']);
                 }
             }
         </script>
