@@ -22,8 +22,8 @@
         if($username != null){
             $data = DB::query("SELECT * FROM $tableName WHERE USERNAME=:username", array(':username' => $username));
             if($data != null){
-                extract(json_decode(file_get_contents('php://input'), true));
-                print_r($PASSWORD);
+                $_PUT = file_get_contents('php://input'), true);
+                print_r($_PUT);
             }
         }
         else {
