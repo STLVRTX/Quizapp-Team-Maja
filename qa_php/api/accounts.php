@@ -26,6 +26,9 @@
                 DB::query("UPDATE $tableName SET PASSWORD=:password WHERE USERNAME=:username", array(':password' => $put_password, ':username' => $username));
                 echo json_encode(['message' => 'password updated successfully']);
             }
+            else {
+                echo json_encode(['message' => 'user does not exist']);
+            }
         }
         else {
             echo json_encode(['message' => 'please specify a username']);
