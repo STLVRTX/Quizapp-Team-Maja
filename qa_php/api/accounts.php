@@ -12,6 +12,9 @@
         }
     }
     elseif ($method == 'POST'){
-        echo 'post request';
+        if($_POST != null){
+            extract($_POST);
+            print_r($_POST);
+        }
     }
 ?>
