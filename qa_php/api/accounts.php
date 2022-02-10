@@ -14,7 +14,7 @@
     elseif ($method == 'POST'){
         if($_POST != null){
             extract($_POST);
-            print_r($_POST);
+            print_r($title);
         }
     }
 ?>
