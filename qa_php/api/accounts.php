@@ -4,7 +4,12 @@
         if($username != null){
             $data = DB::query("SELECT * FROM $tableName WHERE USERNAME=:username", array(':username' => $username));
             if($data != null){
-                echo $url[6];
+                if($url[6] == 'login=true'){
+                    DB::query("UPDATE QA_PLAYER SET LOGGEDIN=1 WHERE USERNAME=:username", array(':username' => $username));
+                }
+                elseif($url[6] == 'login=false'){
+                    DB::query("UPDATE QA_PLAYER SET LOGGEDIN=0 WHERE USERNAME=:username", array(':username' => $username));
+                }
                 echo json_encode($data);
             }
             else {
