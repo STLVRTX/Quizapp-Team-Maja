@@ -24,6 +24,7 @@
             if($data != null){
                 extract(json_decode(file_get_contents('php://input'), true));
                 DB::query("UPDATE $tableName SET PASSWORD=:password WHERE USERNAME=:username", array(':password' => $put_password, ':username' => $username));
+                echo json_encode(['message' => 'password updated successfully']);
             }
         }
         else {
