@@ -23,7 +23,7 @@
         if($username != null){
             $data = DB::query("SELECT * FROM $tableName WHERE USERNAME=:username", array(':username' => $username));
             if($data != null){
-                $_PUT = file_get_contents('php://input'), true);
+                $_PUT = file_get_contents('php://input');
                 print_r($_PUT);
             }
         }
