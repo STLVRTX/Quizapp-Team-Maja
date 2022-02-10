@@ -40,8 +40,8 @@
                 let em = document.getElementById('email').value;
 
                 let params = 'post_username=' + un + '&password=' + pw + '&email=' + em;
-                console.log(params);
-                /*xhr = new XMLHttpRequest();
+
+                xhr = new XMLHttpRequest();
                 xhr.open('POST', 'index.php/accounts/', true);
                 xhr.setRequestHeader('Content-type', 'application/x-www-form')
                 xhr.onreadystatechange = function() {
@@ -49,7 +49,7 @@
                     console.log(this.responseText);
                     }
                 };
-                xhr.send(null);*/
+                xhr.send(params);
             }
 
         </script>
