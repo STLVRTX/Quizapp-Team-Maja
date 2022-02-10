@@ -21,9 +21,7 @@
             }
 
             function handleAccountCreation(){
-                console.log(xhr.responseText);
                 if(xhr.responseText.startsWith('message', 2)){
-                    console.log('WE`RE IN');
                     if(document.getElementById('password').value == document.getElementById('password2').value){
                         sendJSONToDatabase();
                     }
@@ -41,10 +39,8 @@
                 let pw = document.getElementById('password').value;
                 let em = document.getElementById('email').value;
 
-                console.log(un);
-                console.log(pw);
-                console.log(em);
-
+                var params = 'post_username=' + un + '&password=' + pw + '&email=' em;
+                console.log(params);
                 /*xhr = new XMLHttpRequest();
                 xhr.open('POST', 'index.php/accounts/', true);
                 xhr.setRequestHeader('Content-type', 'application/x-www-form')
