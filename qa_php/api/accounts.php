@@ -19,6 +19,7 @@
         }
     }
     elseif ($method == 'PUT'){
+        echo 'in put';
         if($username != null){
             $data = DB::query("SELECT * FROM $tableName WHERE USERNAME=:username", array(':username' => $username));
             if($data != null){
