@@ -21,6 +21,7 @@
             }
 
             function handleAccountCreation(){
+                console.log(xhr.responseText);
                 if(xhr.responseText == '{"message":"user does not exist"}'){
                     if(document.getElementById('password').value == document.getElementById('password2').value){
                         sendJSONToDatabase();
