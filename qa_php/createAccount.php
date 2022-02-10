@@ -39,7 +39,7 @@
                 let pw = document.getElementById('password').value;
                 let em = document.getElementById('email').value;
 
-                let params = 'post_username=' + un + '&password=' + pw + '&email=' + em;
+                let params = 'post_username=' + un + '&post_password=' + pw + '&post_email=' + em;
 
                 xhr = new XMLHttpRequest();
                 xhr.open('POST', 'index.php/accounts/', true);
