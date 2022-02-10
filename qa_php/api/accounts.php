@@ -4,6 +4,7 @@
         if($username != null){
             $data = DB::query("SELECT * FROM $tableName WHERE USERNAME=:username", array(':username' => $username));
             if($data != null){
+                echo $url[6];
                 echo json_encode($data);
             }
             else {
@@ -15,6 +16,7 @@
         if($_POST != null){
             extract($_POST);
             DB::query("INSERT INTO $tableName (USERNAME, PASSWORD, EMAIL) VALUES (:username, :password, :email)", array(':username' => $post_username, ':password' => $post_password, ':email' => $post_email));
+            DB::query("INSERT INTO QA_PLAYER (USERNAME, POINTS) VALUES (:username, 0)", array(':username' => $post_username));
             echo 'success';
         }
     }

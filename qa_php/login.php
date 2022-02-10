@@ -15,7 +15,7 @@
 
             function getJSONFromDatabase(x){
                 xhr = new XMLHttpRequest();
-                xhr.open('GET', 'index.php/accounts/' + x, true);
+                xhr.open('GET', 'index.php/accounts/' + x + '/login=true', true);
                 xhr.onload = handleLogin;
                 xhr.send(null);
             }
