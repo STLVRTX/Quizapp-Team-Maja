@@ -23,7 +23,7 @@
             $data = DB::query("SELECT * FROM $tableName WHERE USERNAME=:username", array(':username' => $username));
             if($data != null){
                 extract(json_decode(file_get_contents('php://input'), true));
-                print_r($put_password);
+                DB::query("UPDATE $tableName SET PASSWORD=:password WHERE USERNAME=:username", array(':password' => $put_password, ':username' => $username));
             }
         }
         else {
