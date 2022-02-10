@@ -23,8 +23,14 @@
             $data = DB::query("SELECT * FROM $tableName WHERE USERNAME=:username", array(':username' => $username));
             if($data != null){
                 extract(json_decode(file_get_contents('php://input'), true));
-                DB::query("UPDATE $tableName SET PASSWORD=:password WHERE USERNAME=:username", array(':password' => $put_password, ':username' => $username));
-                echo json_encode(['message' => 'password updated successfully']);
+                if($put_email == null){
+                    DB::query("UPDATE $tableName SET PASSWORD=:password WHERE USERNAME=:username", array(':password' => $put_password, ':username' => $username));
+                    echo json_encode(['message' => 'password updated successfully']);
+                }
+                else {
+                    DB::query("UPDATE $tableName SET PASSWORD=:password, EMAIL=:email WHERE USERNAME=:username", array(':password' => $put_password, ':email' => $put_email, ':username' => $username));
+                    echo json_encode(['message' => 'data updated successfully']);
+                }
             }
             else {
                 echo json_encode(['message' => 'user does not exist']);
