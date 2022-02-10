@@ -14,7 +14,7 @@
     elseif ($method == 'POST'){
         if($_POST != null){
             extract($_POST);
-            print_r($title);
+            DB::query("INSERT INTO $tableName (USERNAME, PASSWORD, EMAIL) VALUES (:username, :password, :email)", array(':username' -> $username, ':password' -> $password, ':email' -> $email));
         }
     }
 ?>
