@@ -15,6 +15,8 @@
         if($_POST != null){
             extract($_POST);
             echo $post_username;
+            echo $post_password;
+            echo $post_email;
             #DB::query("INSERT INTO $tableName (USERNAME, PASSWORD, EMAIL) VALUES (:username, :password, :email)", array(':username' -> $post_username, ':password' -> $post_password, ':email' -> $post_email));
             #$data = DB::query("SELECT * FROM $tableName ORDER BY ACCOUNTID DESC LIMIT 1");
             #echo 'success ' . $data;
