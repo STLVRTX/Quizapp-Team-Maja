@@ -49,7 +49,7 @@
                     console.log(this.responseText);
                     }
                 };
-                xhr.send(JSONparams);
+                xhr.send(params);
             }
 
         </script>
