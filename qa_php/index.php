@@ -6,20 +6,13 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 $request_uri = $_SERVER['REQUEST_URI'];
 
-$tables = ['accounts'];
+$tables = ['accounts', 'questions'];
 
 $url = rtrim($request_uri, '/');
 $url = filter_var($url, FILTER_SANITIZE_URL);
 $url = explode('/', $url);
 
 $tableName = (string) $url[4];
-
-if($url[5] != null){
-    $username = (string) $url[5];
-}
-else {
-    $username = null;
-}
 
 if(in_array($tableName, $tables)){
     include_once './classes/Database.php';

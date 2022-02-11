@@ -1,4 +1,11 @@
 <?php
+    if($url[5] != null){
+        $username = (string) $url[5];
+    }
+    else {
+        $username = null;
+    }    
+
     $tableName = 'QA_Account';
     if($method == 'GET'){
         if($username != null){
@@ -15,6 +22,9 @@
             else {
                 echo json_encode(['message' => 'user does not exist']);
             }
+        }
+        else {
+            echo json_encode(['message' => 'please specify a username']);
         }
     }
     elseif ($method == 'POST'){
