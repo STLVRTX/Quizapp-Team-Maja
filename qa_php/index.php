@@ -13,18 +13,19 @@ $url = filter_var($url, FILTER_SANITIZE_URL);
 $url = explode('/', $url);
 
 $tableName = (string) $url[4];
+echo $tableName;
 
-if(in_array($tableName, $tables)){
-    if($tableName = 'accounts'){
-        include_once './classes/Database.php';
-        include_once './api/accounts.php';
-    }
-    elseif($tableName = 'questions'){
-        include_once './classes/Database.php';
-        include_once './api/questions.php';
-    }
-}
-else {
-    echo 'table does not exist';
-}
+#if(in_array($tableName, $tables)){
+#   # if($tableName = 'accounts'){
+#        include_once './classes/Database.php';
+#        include_once './api/accounts.php';
+#    }
+#    elseif($tableName = 'questions'){
+#        include_once './classes/Database.php';
+#        include_once './api/questions.php';
+#    }
+#}
+#else {
+#    echo 'table does not exist';
+#}
 ?>
