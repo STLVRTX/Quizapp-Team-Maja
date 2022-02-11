@@ -6,7 +6,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 $request_uri = $_SERVER['REQUEST_URI'];
 
-$tables = ['accounts', 'questions', 'points'];
+$tables = ['accounts', 'questions', 'players'];
 
 $url = rtrim($request_uri, '/');
 $url = filter_var($url, FILTER_SANITIZE_URL);
