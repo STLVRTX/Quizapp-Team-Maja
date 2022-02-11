@@ -6,7 +6,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 $request_uri = $_SERVER['REQUEST_URI'];
 
-$tables = ['accounts', 'questions'];
+$tables = ['accounts', 'questions', 'points'];
 
 $url = rtrim($request_uri, '/');
 $url = filter_var($url, FILTER_SANITIZE_URL);
@@ -22,6 +22,10 @@ if(in_array($tableName, $tables)){
     elseif($tableName == 'questions'){
         include_once './classes/Database.php';
         include_once './api/questions.php';
+    }
+    elseif($tableName == 'points'){
+        include_once './classes/Database.php';
+        include_once './api/points.php';
     }
 }
 else {
