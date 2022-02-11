@@ -14,5 +14,6 @@
             echo json_encode($row2);
         }
         echo ']';
+        echo '<br>';
     }
 ?>
