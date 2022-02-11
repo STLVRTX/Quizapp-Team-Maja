@@ -8,7 +8,7 @@
 
     $data = DB::query("SELECT * FROM QA_Question WHERE DIFFICULTYID=:id", array(':id' => $difficultyID));
     #echo json_encode($data);
-    foreach ($data->fetchAll() as $row){
+    while ($row = $data->fetch()) {
         echo json_encode($row);
     }
 ?>
