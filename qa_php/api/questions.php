@@ -7,13 +7,12 @@
     $amount = (int) $url[6];
 
     $data = DB::query("SELECT * FROM QA_Question WHERE DIFFICULTYID=:id", array(':id' => $difficultyID));
-    foreach($data as $row){
+    foreach($data as $row_question){
         echo '[';
-        echo json_encode($row);
-        foreach(DB::query("SELECT * FROM QA_Answer WHERE QUESTIONID=:id", array(':id' => $row['QUESTIONID'])) as $row2){
-            echo json_encode($row2);
+        echo json_encode($row_question);
+        foreach(DB::query("SELECT * FROM QA_Answer WHERE QUESTIONID=:id", array(':id' => $row_question['QUESTIONID'])) as $row_answer){
+            echo json_encode($row_answer);
         }
         echo ']';
-        echo '<br>';
     }
 ?>
