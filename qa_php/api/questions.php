@@ -8,4 +8,7 @@
 
     echo 'DIFFICULTYID: ' . $difficultyID;
     echo '<br>AMOUNT: ' . $amount;
+
+    $data = DB::query("SELECT * FROM QA_Question WHERE DIFFICULTYID=:id", array(':id' => $difficultyID));
+    echo json_encode($data);
 ?>
