@@ -23,9 +23,9 @@ if(in_array($tableName, $tables)){
         include_once './classes/Database.php';
         include_once './api/questions.php';
     }
-    elseif($tableName == 'points'){
+    elseif($tableName == 'players'){
         include_once './classes/Database.php';
-        include_once './api/points.php';
+        include_once './api/players.php';
     }
 }
 else {
