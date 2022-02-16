@@ -20,11 +20,11 @@
                 echo json_encode($data);
             }
             else {
-                echo json_encode(['message' => 'user does not exist']);
+                echo json_encode(array('message' => 'user does not exist'));
             }
         }
         else {
-            echo json_encode(['message' => 'please specify a username']);
+            echo json_encode(array('message' => 'please specify a username'));
         }
     }
     elseif ($method == 'POST'){
