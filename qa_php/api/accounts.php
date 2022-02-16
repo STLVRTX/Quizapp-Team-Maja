@@ -20,7 +20,9 @@
                 echo json_encode($data);
             }
             else {
-                echo json_encode(['message' => 'user does not exist']);
+                $arr = array("message" => "user does not exist");
+                #echo json_encode(['message' => 'user does not exist']);
+                echo json_encode($arr);
             }
         }
         else {
