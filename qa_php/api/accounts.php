@@ -21,7 +21,7 @@
             }
             else {
                 $msg = array('message' => 'user does not exist');
-                echo json_encode($msg);
+                echo json_encode($msg, JSON_FORCE_OBJECT);
             }
         }
         else {
