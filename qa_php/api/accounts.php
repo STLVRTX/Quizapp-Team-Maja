@@ -24,7 +24,7 @@
             }
         }
         else {
-            $msg = array('message' => 'please specify a username')
+            $msg = array(['message' => 'please specify a username'])
             echo json_encode($msg);
         }
     }
