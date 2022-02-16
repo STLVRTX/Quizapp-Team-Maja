@@ -24,7 +24,8 @@
             }
         }
         else {
-            echo json_encode(['message' => 'please specify a username']);
+            $msg = array('message' => 'please specify a username')
+            echo json_encode($msg);
         }
     }
     elseif ($method == 'POST'){
