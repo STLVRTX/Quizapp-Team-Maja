@@ -17,6 +17,12 @@
                 elseif($url[6] == 'login=false'){
                     DB::query("UPDATE QA_PLAYER SET LOGGEDIN=0 WHERE USERNAME=:username", array(':username' => $username));
                 }
+                elseif($url[6] == 'ingame=true'){
+                    DB::query("UPDATE QA_PLAYER SET INGAME=1 WHERE USERNAME=:username", array(':username' => $username));
+                }
+                elseif($url[6] == 'ingame=false'){
+                    DB::query("UPDATE QA_PLAYER SET INGAME=0 WHERE USERNAME=:username", array(':username' => $username));
+                }
                 echo json_encode($data);
             }
             else {
