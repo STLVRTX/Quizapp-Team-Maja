@@ -6,7 +6,7 @@
 
     $request_uri = $_SERVER['REQUEST_URI'];
 
-    $tables = ['accounts', 'questions', 'players', 'highscores'];
+    $tables = ['accounts', 'questions', 'players', 'highscores', 'sessions'];
 
     $url = rtrim($request_uri, '/');
     $url = filter_var($url, FILTER_SANITIZE_URL);
@@ -30,6 +30,10 @@
         elseif($tableName == 'highscores'){
             include_once './classes/Database.php';
             include_once './api/highscores.php';
+        }
+        elseif($tableName == 'sessions'){
+            include_once './classes/Database.php';
+            include_once './api/sessions.php';
         }
     }
     else {
