@@ -20,6 +20,7 @@
                 echo json_encode($data);
             }
             else {
+                //to do, empty data object return
                 echo json_encode(['message' => 'user does not exist']);
             }
         }
@@ -31,7 +32,7 @@
         if($_POST != null){
             extract($_POST);
             DB::query("INSERT INTO $tableName (USERNAME, PASSWORD, EMAIL) VALUES (:username, :password, :email)", array(':username' => $post_username, ':password' => $post_password, ':email' => $post_email));
-            DB::query("INSERT INTO QA_PLAYER (USERNAME, POINTS) VALUES (:username, 0)", array(':username' => $post_username));
+            DB::query("INSERT INTO QA_PLAYER (USERNAME, POINTS, LOGGEDIN, INQUEUE, INGAME, GAMES) VALUES (:username, 0, 0, 0, 0, 0)", array(':username' => $post_username));
             echo 'success';
         }
     }
