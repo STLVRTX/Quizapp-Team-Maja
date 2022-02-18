@@ -5,8 +5,10 @@
 
     if($method == 'GET'){
         if($category != null){
-            $data = DB::query("SELECT * FROM :tableName", array(':tableName' => $tableName));
-            echo json_encode($data);
+            if($category == 'categories'){
+                $data = DB::query("SELECT * FROM :tableName", array(':tableName' => $tableName));
+                echo json_encode($data);
+            }
         }
     }   
 ?>
